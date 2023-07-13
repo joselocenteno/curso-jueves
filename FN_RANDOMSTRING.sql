@@ -3,7 +3,7 @@ DROP FUNCTION IF EXISTS FN_RANDOMSTRING $$
 CREATE FUNCTION FN_RANDOMSTRING(length SMALLINT(3)) RETURNS varchar(100) CHARSET utf8
 begin
     SET @returnStr = '';
-    SET @allowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+    SET @allowedChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#&%abcdefghijklmnopqrstuvwxyz';
     SET @i = 0;
 
     WHILE (@i < length) DO
